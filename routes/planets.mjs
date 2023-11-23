@@ -55,6 +55,12 @@ async function deleteDocument(query) {
   console.log(`${result.deletedCount} document(s) deleted`);
 }
 
+// Uncomment and modify the lines below to use the CRUD functions
+
+// insertDocument({ name: 'New Planet', type: 'Terrestrial' });
+// findDocuments({});
+// updateDocument({ name: 'New Planet' }, { type: 'Gas Giant' });
+// deleteDocument({ name: 'New Planet' });
 //Create new planet data on postman
 // router.post("/", async (req, res) => {
 //   const planet = new Planet.insertOne(req.body);
