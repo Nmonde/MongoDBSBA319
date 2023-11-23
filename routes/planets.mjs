@@ -5,33 +5,28 @@ import { ObjectId } from "mongodb"
 
 const router = express.Router()
 
-// Get all planets collections
+// // Working route to Get all planets collections
 // router.get('/', async (req, res) => {
 //   const planetsCollection = await db.collection("planets")
 //   const results = await planetsCollection.find({}).toArray()
 //   res.send(results).status(200)
 // })
 
-router.get("../:id", async (req, res) => {
-    const planetsCollection = await req.db.collection("planets")
-    const results = await planetsCollection.findOne({})
-    res.send(results).status(200)
-  })
+
+//Show one of the planets collections using name Mercury, Mars, etc.
+// router.get("/:name", async (req, res) => {
+//     const planetsCollection =  db.collection("planets")
+//     const results = await planetsCollection.findOne( {name:req.params.name} )
+//     res.send(results).status(200)
+//   })
   
+// router.get("/:name", async (req, res) => {
+//       const planetsCollection =  db.collection("planets")
+//       const results = await planetsCollection.insertOne( {name:req.params.name} )
+//       res.send(results).status(200)
+//     })
 
-
-
-
-// //Show one of the planets collections
-// router.get("/planets/:id", async(req,res)=> {
-//   const planetsCollection= await db.planetsCollection("planets")
-//   const query = {_id: ObjectId(req.params.id)} //query selector
-//   const result= await planetsCollection.findOne(query).toArray()
-//   if(!result) res.send("Not Found").status(404);
-//   else res.send(result).status(200)
-// })
-
-// // Create new planet data
+// Create new planet data
 // router.post("/", async (req, res) => {
 //   const planet = new Planet(req.body);
 //   try {
